@@ -1,0 +1,23 @@
+cron job is the trigger.
+
+cron job triggers some automation script
+
+script cleans up old runs/logs (output.log, etc)
+
+#OPTIONAL
+#script determines if there are new files to upload from last run of the script (manifest.json? how do we compare to previous executions? where can we find current contents of remote?)
+
+script executes python script to upload
+
+python script is configured to push logs to some defined local location ({{SCRIPT_NAME}}_output.log, etc)
+
+script waits for python script completion (could take awhile due to network traffic)
+
+script reads contents of python output into the body of e-mail
+
+script sends e-mail to me with some subject line (FAILURE/SUCCESS/ETC?)
+
+#OPTIONAL
+#script updates manifest?
+
+script ends
